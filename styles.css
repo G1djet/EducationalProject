@@ -17,10 +17,18 @@ body {
     }
 }
 
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('Play-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
 
 .navbar-item {
     color: black;
     margin-right: 9rem;
+    font-family: 'MyCustomFont';
+    font-size: 30px;
   }
 .navbar {
     background-color: transparent;
@@ -34,31 +42,36 @@ body {
     overflow: hidden;
   }
 
-  .hero-body {
+.hero-body {
     position: relative;
     z-index: 1;
   }
 
-  .photo-1 {
+.photo-1 {
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 60%;
-    height: 60%;
-    background-image: url('https://picsum.photos/id/1/1920/1080');
-    background-size: cover;
+    width: 50%;
+    height: 100%;
+    background-image: url('main1.png');
+    background-size: contain;
     background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
   }
 
-  .photo-2 {
+.photo-2 {
     position: absolute;
-    top: 50%;
+    bottom: 0;
     left: 50%;
-    transform: translate(-50%, -50%);
-    width: 70%;
-    height: 70%;
-    background-image: url('https://picsum.photos/id/2/1920/1080');
-    background-size: cover;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 100%;
+    background-image: url('main2.png');
+    background-size: contain;
     background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+    top: -250px;
   }
