@@ -1,4 +1,5 @@
 
+
 body {
     background: linear-gradient(204deg, #e8e8e8, #616161, #cac8c8, #504f4f);
     background-size: 400% 400%;
@@ -22,19 +23,47 @@ body {
 
 @font-face {
     font-family: 'MyCustomFont';
-    src: url('Play-Regular.ttf');
+    src: url('Rostov.ttf');
     font-weight: normal;
     font-style: normal;
   }
 
-.navbar-item {
-    color: black;
-    margin-right: 9rem;
-    font-family: 'MyCustomFont';
-    font-size: 30px;
+  .navbar-item-icon img {
+    width: 30px;
+    filter: brightness(0%);
+    transition: all 0.7s ease-in-out;
   }
-.navbar {
-    background-color: transparent;
+  
+  .navbar-item-icon img:hover {
+    filter: brightness(100%);;
+    transform: scale(1.3);
+  }
+
+.topbar-center-logo {
+  background: transparent;
+
+}
+
+.topbar-center-logo .menu {
+  background: transparent;
+}
+
+.topbar-center-logo .menu a {
+  color: #000000;
+  font-family: 'MyCustomFont';
+  font-size: 17px;
+}
+
+.topbar-center-logo .top-bar-center {
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+
+@media screen and (max-width: 39.9375em) {
+  .topbar-center-logo .top-bar-center {
+    display: none;
+  }
 }
 
 
@@ -44,7 +73,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
     width: 50%;
-    height: 100%;
+    height: 100vh;
     background-image: url('main1.png');
     background-size: contain;
     background-position: center;
@@ -54,7 +83,7 @@ body {
 
 .photo-2 {
     position: absolute;
-    top: 30px;
+    top: 50px;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -67,12 +96,27 @@ body {
     z-index: 1;
   }
 
-.movie {
-    position: fixed;
-    top: 0;
-    width: 200%;
-    right: 0;
-    bottom: 0;
+.video-container {
+    position: relative;
+    top: 94.5vh;
     left: 0;
-    z-index: -1;
+    width: 100%;
+    height: 110vh;
+    overflow: hidden;
+    z-index: 2;
   }
+  
+.video-container video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+/* .profile{
+    height: 100vh;
+} */

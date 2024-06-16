@@ -1,0 +1,65 @@
+body {
+  background: linear-gradient(204deg, #e8e8e8, #616161, #cac8c8, #504f4f);
+  background-size: 400% 400%;
+  animation: AnimationName 16s ease infinite;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+@keyframes AnimationName {
+  0% {
+      background-position: 97% 0%;
+  }
+  50% {
+      background-position: 4% 100%;
+  }
+  100% {
+      background-position: 97% 0%;
+  }
+}
+
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('Rostov.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.navbar-item-icon img {
+  width: 30px;
+  filter: brightness(0%);
+  transition: all 0.7s ease-in-out;
+}
+
+.navbar-item-icon img:hover {
+  filter: brightness(100%);;
+  transform: scale(1.3);
+}
+
+.topbar-center-logo {
+background: transparent;
+
+}
+
+.topbar-center-logo .menu {
+background: transparent;
+}
+
+.topbar-center-logo .menu a {
+color: #000000;
+font-family: 'MyCustomFont';
+font-size: 17px;
+}
+
+.topbar-center-logo .top-bar-center {
+-webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+        flex: 1 0 auto;
+}
+
+@media screen and (max-width: 39.9375em) {
+.topbar-center-logo .top-bar-center {
+  display: none;
+}
+}
