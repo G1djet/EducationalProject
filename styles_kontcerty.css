@@ -1,7 +1,7 @@
 
 
 body {
-  background: linear-gradient(204deg, #e8e8e8, #616161, #cac8c8, #504f4f);
+  background: #111214;
   background-size: 400% 400%;
   animation: AnimationName 16s ease infinite;
   margin: 0;
@@ -40,12 +40,12 @@ body {
 }
 
 .topbar-center-logo {
-background: transparent;
+background: dde0e6;
 
 }
 
 .topbar-center-logo .menu {
-background: transparent;
+background: dde0e6;
 }
 
 .topbar-center-logo .menu a {
@@ -97,11 +97,16 @@ font-size: 17px;
   font-family: 'MyCustomFont';
 }
 
-.table{
-  position: absolute;
-  width: 1000px;
-  border-collapse: collapse;
+table{
+  margin-left: 250px;
+  background-color: transparent;
+  width: 70%;
+  align-content: center;
 }
+th, td {
+  background-color:transparent;
+}
+
 .buy-button {
   background-color: red;
   color: white;
@@ -115,6 +120,7 @@ font-size: 17px;
 }
 
 .buy-button:hover {
+  cursor: pointer;
   padding: 7px 17px;
   background-color: white;
   color: red;
@@ -123,12 +129,13 @@ font-size: 17px;
 }
 
 .day {
+  margin-top: 15px;
   letter-spacing: 4px;
   font-size: 4rem;
   font-family: 'MyCustomFont';
   color:red;
   margin-bottom: 0;
-  line-height: 1rem;
+  line-height: 0rem;
 }
 
 .year {
@@ -137,7 +144,7 @@ font-size: 17px;
   font-family: 'MyCustomFont';
   margin-top: 0;
   line-height: 0rem;
-  text-align: left;
+  text-align: center;
 }
 
 .month {
@@ -157,6 +164,7 @@ font-size: 17px;
 }
 
 .location {
+  margin-top: 10px;
   letter-spacing: 4px;
   font-size: 3rem;
   font-family: 'MyCustomFont';
@@ -164,10 +172,11 @@ font-size: 17px;
 }
 
 .place {
+  color: #686767;
   letter-spacing: 4px;
-  font-size: 1.9rem;
+  font-size: 1.3rem;
   font-family: 'MyCustomFont';
-  line-height: 1rem;
+  line-height: 0rem;
 }
 
 .date-year {
