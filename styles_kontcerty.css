@@ -6,6 +6,7 @@ body {
     margin: 0;
     padding: 0;
     height: 100%;
+    font-family: 'MyCustomFont';
 }
 
 @keyframes AnimationName {
@@ -64,38 +65,69 @@ body {
     display: none;
   }
 }
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #dde0e6;
+}
+
+.hero-text h1 {
+  letter-spacing: 4px;
+  font-size: 8rem;
+  margin-bottom: 1rem;
+  font-family: 'MyCustomFont';
+}
+
+.hover{
+  font-family: 'MyCustomFont';
+}
 .concert-schedule {
     width: 100%;
     border-collapse: collapse;
-    font-family: MyCustomFont;
+    font-family: 'MyCustomFont';
   }
   
-  .concert-schedule th,
   .concert-schedule td {
     padding: 10px;
     text-align: left;
     border-bottom: 1px solid #ddd;
   }
   
-  .concert-schedule th {
-    background-color: transparent;
-  }
   
   /* Date column styles */
   .concert-schedule .date {
+    display:inline-block;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
   
   .concert-schedule .date .day {
-    font-size: 24px;
+    font-size: 70px;
     font-weight: bold;
   }
   
-  .concert-schedule .date .month,
+  .concert-schedule .date .month{
+    font-size: 26px;
+  }
   .concert-schedule .date .weekday {
-    font-size: 14px;
+    font-size: 24px;
   }
   
   /* Past event styles */
