@@ -1,72 +1,75 @@
-/* General table styles */
+
+
 body {
-    background: linear-gradient(204deg, #e8e8e8, #616161, #cac8c8, #504f4f);
-    background-size: 400% 400%;
-    animation: AnimationName 16s ease infinite;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: 'MyCustomFont';
+  background: linear-gradient(204deg, #e8e8e8, #616161, #cac8c8, #504f4f);
+  background-size: 400% 400%;
+  animation: AnimationName 16s ease infinite;
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
 @keyframes AnimationName {
-    0% {
-        background-position: 97% 0%;
-    }
-    50% {
-        background-position: 4% 100%;
-    }
-    100% {
-        background-position: 97% 0%;
-    }
+  0% {
+      background-position: 97% 0%;
+  }
+  50% {
+      background-position: 4% 100%;
+  }
+  100% {
+      background-position: 97% 0%;
+  }
 }
 
 @font-face {
-    font-family: 'MyCustomFont';
-    src: url('Rostov.ttf');
-    font-weight: normal;
-    font-style: normal;
-  }
+  font-family: 'MyCustomFont';
+  src: url('Rostov.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
 
-  .navbar-item-icon img {
-    width: 30px;
-    filter: brightness(0%);
-    transition: all 0.7s ease-in-out;
-  }
-  
-  .navbar-item-icon img:hover {
-    filter: brightness(100%);;
-    transform: scale(1.3);
-  }
+.navbar-item-icon img {
+  width: 30px;
+  filter: brightness(0%);
+  transition: all 0.7s ease-in-out;
+}
+
+.navbar-item-icon img:hover {
+  filter: brightness(100%);;
+  transform: scale(1.3);
+}
 
 .topbar-center-logo {
-  background: transparent;
+background: transparent;
 
 }
 
 .topbar-center-logo .menu {
-  background: transparent;
+background: transparent;
 }
 
 .topbar-center-logo .menu a {
-  color: #000000;
-  font-family: 'MyCustomFont';
-  font-size: 17px;
+color: #000000;
+font-family: 'MyCustomFont';
+font-size: 17px;
 }
 
 .topbar-center-logo .top-bar-center {
-  -webkit-flex: 1 0 auto;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
+-webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+        flex: 1 0 auto;
 }
 
 @media screen and (max-width: 39.9375em) {
-  .topbar-center-logo .top-bar-center {
-    display: none;
-  }
+.topbar-center-logo .top-bar-center {
+  display: none;
+}
 }
 
-.hero-section {
+
+
+
+ .hero-section {
   position: relative;
   width: 100%;
   height: 60vh;
@@ -94,69 +97,191 @@ body {
   font-family: 'MyCustomFont';
 }
 
-.hover{
+.table{
+  position: absolute;
+  width: 1000px;
+  border-collapse: collapse;
+}
+.buy-button {
+  background-color: red;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 0;
+  /* transition: background-color 0.3s, color 0.3s, border 0.3s; */
   font-family: 'MyCustomFont';
 }
-.concert-schedule {
-    width: 100%;
-    border-collapse: collapse;
-    font-family: 'MyCustomFont';
-  }
-  
-  .concert-schedule td {
-    padding: 10px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  
-  /* Date column styles */
-  .concert-schedule .date {
-    display:inline-block;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .concert-schedule .date .day {
-    font-size: 70px;
-    font-weight: bold;
-  }
-  
-  .concert-schedule .date .month{
-    font-size: 26px;
-  }
-  .concert-schedule .date .weekday {
-    font-size: 24px;
-  }
-  
-  /* Past event styles */
-  .concert-schedule .past-event {
-    color: #999;
-  }
-  
-  .concert-schedule .past-event .btn-disabled {
-    background-color: transparent;
-    color: #999;
-    cursor: not-allowed;
-  }
-  
-  /* Button styles */
-  .concert-schedule .btn {
-    display: inline-block;
-    padding: 8px 16px;
-    border: none;
-    border-radius: 4px;
-    font-size: 14px;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
-  .concert-schedule .btn-primary {
-    background-color: #4CAF50;
-    color: white;
-  }
-  
-  .concert-schedule .btn-primary:hover {
-    background-color: #45a049;
-  }
+
+.buy-button:hover {
+  padding: 7px 17px;
+  background-color: white;
+  color: red;
+  border: 3px solid red;
+  font-family: 'MyCustomFont';
+}
+
+.day {
+  letter-spacing: 4px;
+  font-size: 4rem;
+  font-family: 'MyCustomFont';
+  color:red;
+  margin-bottom: 0;
+  line-height: 1rem;
+}
+
+.year {
+  letter-spacing: 4px;
+  font-size: 1rem;
+  font-family: 'MyCustomFont';
+  margin-top: 0;
+  line-height: 0rem;
+  text-align: left;
+}
+
+.month {
+  letter-spacing: 4px;
+  font-size: 2rem;
+  font-family: 'MyCustomFont';
+  text-align: left;
+  line-height: 0rem;
+}
+
+.weekday {
+  letter-spacing: 4px;
+  font-size: 1.1rem;
+  font-family: 'MyCustomFont';
+  text-align: left;
+  line-height: 0rem;
+}
+
+.location {
+  letter-spacing: 4px;
+  font-size: 3rem;
+  font-family: 'MyCustomFont';
+  line-height: 1rem;
+}
+
+.place {
+  letter-spacing: 4px;
+  font-size: 1.9rem;
+  font-family: 'MyCustomFont';
+  line-height: 1rem;
+}
+
+.date-year {
+  text-align: right;
+  padding-right: 5px;
+}
+
+.month-weekday {
+  text-align: left;
+  padding-left: 5px;
+}
+/* .day{
+  letter-spacing: 4px;
+  font-size: 4rem;
+  font-family: 'MyCustomFont';
+}
+.year {
+  letter-spacing: 4px;
+  font-size: 4rem;
+  font-family: 'MyCustomFont';
+}
+.month {
+  letter-spacing: 4px;
+  font-size: 4rem;
+  font-family: 'MyCustomFont';
+}
+.weekday {
+  letter-spacing: 4px;
+  font-size: 4rem;
+  font-family: 'MyCustomFont';
+}
+.location {
+  letter-spacing: 4px;
+  font-size: 4rem;
+  font-family: 'MyCustomFont';
+}
+.place {
+  letter-spacing: 4px;
+  font-size: 4rem;
+  font-family: 'MyCustomFont';
+} */
+/* .concert-schedule {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'MyCustomFont', sans-serif;
+  background-color: transparent;
+}
+
+.concert-schedule .row {
+  border-bottom: 1px solid #ddd;
+  padding: 20px 0;
+}
+
+.concert-schedule .date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.concert-schedule .date .day {
+  font-size: 32px;
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: bold;
+  line-height: 1;
+}
+
+.concert-schedule .date .month {
+  font-size: 16px;
+  font-size: clamp(16px, 3vw, 24px);
+}
+
+.concert-schedule .date .weekday {
+  font-size: 12px;
+  font-size: clamp(12px, 2vw, 14px);
+}
+
+.concert-schedule .location {
+  font-size: 16px;
+  font-size: clamp(16px, 3vw, 20px);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.concert-schedule .event-description {
+  font-size: 12px;
+  font-size: clamp(12px, 2vw, 14px);
+}
+
+.concert-schedule .past-event {
+  color: #999;
+}
+
+.concert-schedule .past-event .btn-disabled {
+  background-color: transparent;
+  color: #999;
+  cursor: not-allowed;
+}
+
+.concert-schedule .btn {
+  display: inline-block;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-size: clamp(14px, 2vw, 16px);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.concert-schedule .btn-primary {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.concert-schedule .btn-primary:hover {
+  background-color: #45a049;
+} */
