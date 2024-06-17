@@ -188,109 +188,44 @@ th, td {
   text-align: left;
   padding-left: 5px;
 }
-/* .day{
-  letter-spacing: 4px;
-  font-size: 4rem;
+.concert-photos {
+  width: 70%;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+
+h2{
+  margin-top: 100px;
+  font-family: 'MyCustomFont';
+  text-align: left;
+  color: #dde0e6;
+}
+.section-title {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.concert-info {
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.concert-location {
+  font-size: 18px;
+  color: #bbbbbb;
   font-family: 'MyCustomFont';
 }
-.year {
-  letter-spacing: 4px;
-  font-size: 4rem;
-  font-family: 'MyCustomFont';
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
 }
-.month {
-  letter-spacing: 4px;
-  font-size: 4rem;
-  font-family: 'MyCustomFont';
-}
-.weekday {
-  letter-spacing: 4px;
-  font-size: 4rem;
-  font-family: 'MyCustomFont';
-}
-.location {
-  letter-spacing: 4px;
-  font-size: 4rem;
-  font-family: 'MyCustomFont';
-}
-.place {
-  letter-spacing: 4px;
-  font-size: 4rem;
-  font-family: 'MyCustomFont';
-} */
-/* .concert-schedule {
+
+.photo-grid img {
   width: 100%;
-  border-collapse: collapse;
-  font-family: 'MyCustomFont', sans-serif;
-  background-color: transparent;
+  height: auto;
+  object-fit: cover;
 }
-
-.concert-schedule .row {
-  border-bottom: 1px solid #ddd;
-  padding: 20px 0;
-}
-
-.concert-schedule .date {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.concert-schedule .date .day {
-  font-size: 32px;
-  font-size: clamp(32px, 5vw, 48px);
-  font-weight: bold;
-  line-height: 1;
-}
-
-.concert-schedule .date .month {
-  font-size: 16px;
-  font-size: clamp(16px, 3vw, 24px);
-}
-
-.concert-schedule .date .weekday {
-  font-size: 12px;
-  font-size: clamp(12px, 2vw, 14px);
-}
-
-.concert-schedule .location {
-  font-size: 16px;
-  font-size: clamp(16px, 3vw, 20px);
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.concert-schedule .event-description {
-  font-size: 12px;
-  font-size: clamp(12px, 2vw, 14px);
-}
-
-.concert-schedule .past-event {
-  color: #999;
-}
-
-.concert-schedule .past-event .btn-disabled {
-  background-color: transparent;
-  color: #999;
-  cursor: not-allowed;
-}
-
-.concert-schedule .btn {
-  display: inline-block;
-  padding: 8px 16px;
-  border: none;
-  border-radius: 4px;
-  font-size: 14px;
-  font-size: clamp(14px, 2vw, 16px);
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.concert-schedule .btn-primary {
-  background-color: #4CAF50;
-  color: white;
-}
-
-.concert-schedule .btn-primary:hover {
-  background-color: #45a049;
-} */
