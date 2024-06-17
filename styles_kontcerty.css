@@ -276,37 +276,6 @@ h2{
   text-align: left;
   color: #dde0e6;
 }
-/* 
-.section-title {
-  font-size: 36px;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.concert-info {
-  text-align: left;
-  margin-bottom: 40px;
-}
-
-.concert-location {
-  font-size: 18px;
-  color: #bbbbbb;
-  font-family: 'MyCustomFont';
-}
-
-.photo-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 20px;
-}
-
-.photo-grid img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-} */
-
 
 
 .footer {
@@ -350,7 +319,7 @@ h2{
 
 .footer-logo-text {
   font-size: 14px;
-  /* text-align: left; */
+
 }
 
 .footer-text p {
@@ -391,17 +360,17 @@ h2{
   display: inline-block;
   width: 40px;
   height: 40px;
-  background-color: #000;
+  background-color: transparent;
   color: #fff;
   text-align: center;
   line-height: 40px;
   border-radius: 50%;
-  margin-right: 10px;
   transition: background-color 0.3s ease;
 }
 
 .footer-item-icon img{
   width: 30px;
+  margin-right: 15px;
   filter: brightness(0) invert(1);
   transition: all 0.7s ease-in-out;
 }
