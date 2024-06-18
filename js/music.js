@@ -10,11 +10,13 @@ albumCovers.forEach(cover => {
 });
 
 document.addEventListener('click', (event) => {
-  if (!event.target.closest('.album-cover')) {
-    const backCovers = document.querySelectorAll('.back');
-    backCovers.forEach(back => {
-      back.style.transform = 'translateX(100%)';
-    });
-    popup.style.display = 'none';
-  }
-});
+    if (!event.target.closest('.album-cover')) {
+      const backCovers = document.querySelectorAll('.back');
+      backCovers.forEach(back => {
+        back.style.transform = 'translateX(100%)';
+      });
+      popup.style.display = 'none';
+    }
+  });
+  
+  
