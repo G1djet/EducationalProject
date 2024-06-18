@@ -110,19 +110,6 @@ h1 {
   width: 80px;
 }
 
-/* .icon_wrapper {
-  margin: 50px auto 0;
-  width: 100%;
-}
-
-.icon {
-  display: block;
-  fill: #000000;
-  height: 50px;
-  margin: 0 auto;
-  width: 50px;
-} */
-
 .email {
 	float: right;
 	width: 45%;
@@ -169,12 +156,6 @@ input[type='text']:focus, [type='email']:focus, textarea:focus {
   font-family: 'MyCustomFont';
 }
 
-/* select {
-  background: url('https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-32.png') no-repeat right;
-  outline: none;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-} */
 
 select::-ms-expand {
   display: none;
@@ -315,7 +296,7 @@ textarea {
   margin-right: 20px;
 }
 .footer-logo {
-  max-width: 100px;
+  max-width: 230px;
   margin-right: 10px;
 }
 
