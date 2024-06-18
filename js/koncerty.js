@@ -1,8 +1,10 @@
-const concertTitles = document.querySelectorAll('.concert-title');
+const concertTitles = document.querySelectorAll('.concert-item');
 const photoGalleries = document.querySelectorAll('.photo-gallery');
 const modal = document.querySelector('.modal');
 const modalImage = document.querySelector('.modal-content img');
 const closeButton = document.querySelector('.close-button');
+
+
 
 concertTitles.forEach((title, index) => {
   title.addEventListener('click', () => {
