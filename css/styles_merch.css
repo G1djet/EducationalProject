@@ -1,205 +1,361 @@
 body {
-    background: linear-gradient(204deg, #e8e8e8, #616161, #cac8c8, #504f4f);
-    background-size: 400% 400%;
-    animation: AnimationName 16s ease infinite;
-    margin: 0;
-    padding: 0;
-    height: 100%;
+  background: linear-gradient(204deg, #e8e8e8, #616161, #cac8c8, #504f4f);
+  background-size: 400% 400%;
+  animation: AnimationName 16s ease infinite;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'MyCustomFont';
 }
 
 @keyframes AnimationName {
-    0% {
-        background-position: 97% 0%;
-    }
-    50% {
-        background-position: 4% 100%;
-    }
-    100% {
-        background-position: 97% 0%;
-    }
+  0% {
+      background-position: 97% 0%;
+  }
+  50% {
+      background-position: 4% 100%;
+  }
+  100% {
+      background-position: 97% 0%;
+  }
 }
 
 @font-face {
-    font-family: 'MyCustomFont';
-    src: url('Rostov.ttf');
-    font-weight: normal;
-    font-style: normal;
-  }
-  /* .navbar{
-    position: absolute;
-  } */
-  .navbar-item-icon img {
-    width: 30px;
-    filter: brightness(0%);
-    transition: all 0.7s ease-in-out;
-  }
-  
-  .navbar-item-icon img:hover {
-    filter: brightness(100%);;
-    transform: scale(1.3);
-  }
-  
-  .topbar-center-logo {
-  background: transparent;
-  
-  }
-  
-  .topbar-center-logo .menu {
-  background: transparent;
-  }
-  
-  .topbar-center-logo .menu a {
-  color: #000000;
   font-family: 'MyCustomFont';
-  font-size: 17px;
-  }
-  
-  .topbar-center-logo .top-bar-center {
-  -webkit-flex: 1 0 auto;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
-  }
-  
-  @media screen and (max-width: 39.9375em) {
-  .topbar-center-logo .top-bar-center {
-    display: none;
-  }
-  }
+  src: url('Rostov.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.navbar-item-icon img {
+  width: 30px;
+  filter: brightness(0%);
+  transition: all 0.7s ease-in-out;
+}
+
+.navbar-item-icon img:hover {
+  filter: brightness(100%);;
+  transform: scale(1.3);
+}
+
+.topbar-center-logo {
+background: transparent;
+
+}
+
+.topbar-center-logo .menu {
+background: transparent;
+}
+
+.topbar-center-logo .menu a {
+color: #000000;
+font-family: 'MyCustomFont';
+font-size: 17px;
+}
+
+.topbar-center-logo .top-bar-center {
+-webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+        flex: 1 0 auto;
+}
+
+@media screen and (max-width: 39.9375em) {
+.topbar-center-logo .top-bar-center {
+  display: none;
+}
+}
 
 
 
-  footer{
-    position:relative;
-    z-index: -1;
-  }
-  .social-footer {
-    padding: 1rem;
-    background: #8a8a8a;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
+tbody{
+  border-collapse: collapse;
+  background: none;
+}
+
+.merch-items {
+  width: 150vh;
+  height: auto;
+  margin: 0 auto;
+  background-color: transparent;
+  border-collapse: collapse;
+  /* padding-top: 10%; */
+}
+
+.merch-items table {
+  border-spacing: 150px 150px;
+  border-collapse: separate;
+}
+
+.merch-items td {
+  padding: 0;
+}
+
+.merch-item {
+  height: 70%;
+  padding-bottom: 100%;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 0 0 transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.merch-item-photo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.3s ease-in-out;
+}
+
+
+.merch-item:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  transform: scale(1.2);
+}
+
+.merch-item .item-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.merch-item:hover .item-info {
+  opacity: 1;
+}
+
+.merch-item .item-info h3,
+.merch-item .item-info p {
+  margin: 5px 0;
+}
+
+h3{
+  text-align: center;
+  font-family: "MyCustomFont";
+}
+
+
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(128, 128, 128, 0.8); /* Серый фон */
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%;
+  display: flex;
+}
+
+.popup-image {
+  width: 40%;
+  position: relative;
+}
+
+.album-cover-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.album-vinyl-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+}
+
+.popup-info {
+  width: 60%;
+  padding-left: 20px;
+  text-align: left; /* Выравнивание по левому краю */
+}
+
+.popup-info h1,
+.popup-info h2,
+.popup-info p {
+  text-align: left;
+}
+
+.track-list {
+  margin-top: 20px;
+}
+
+.track-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.track-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.play-button {
+  margin-right: 10px;
+}
+
+.review-section {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.review-name,
+.review-text {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.submit-review {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #aaa;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+
+.footer {
+  background-color: transparent;
+  /* border-top: 3px solid #cecece; */
+  padding: 30px 0;
+  color: #000000;
+  font-family: "MyCustomFont";
+  z-index: -1;
   
-  .social-footer .social-footer-icons li:last-of-type {
-    margin-right: 0;
-  }
-  
-  .social-footer .social-footer-icons .fa {
-    font-size: 1.3rem;
-    color: #fefefe;
-  }
-  
-  .social-footer .social-footer-icons .fa:hover {
-    color: #4a4a4a;
-    transition: color 0.3s ease-in;
-  }
-  
-  
-  .footer {
-    background-color: transparent;
-    /* border-top: 3px solid #cecece; */
-    padding: 30px 0;
-    color: #000000;
-    font-family: "MyCustomFont";
-    z-index: -1;
-    
-  }
-  
-  
-  .footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .footer-left {
-    flex: 1;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    text-align: right;
-  }
-  
-  .footer-logo-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    margin-right: 20px;
-  }
-  .footer-logo {
-    max-width: 100px;
-    margin-right: 10px;
-  }
-  
-  .footer-logo-text {
-    font-size: 14px;
-    /* text-align: left; */
-  }
-  
-  .footer-text p {
-    margin: 0;
-    line-height: 1.2;
-    color: #000000;
-    font-size: 1.5rem;
-  }
-  
-  .footer-text p {
-    margin: 0;
-    line-height: 1.2;
-  }
-  
-  .footer-right {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    font-family: "MyCustomFont";
-  }
-  
-  .footer-title {
-    font-size: 2.4rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-    font-family: "MyCustomFont";
-  
-  }
-  
-  .footer-icons {
-    display: flex;
-    justify-content: flex-start;
-    margin-bottom: 20px;
-  }
-  
-  .footer-icon {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    background-color: #000;
-    color: #fff;
-    text-align: center;
-    line-height: 40px;
-    border-radius: 50%;
-    margin-right: 10px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .footer-item-icon img{
-    width: 30px;
-    margin-right: 15px;
-    filter: brightness(0%);
-    transition: all 0.7s ease-in-out;
-  }
-  
-  
-  .footer-item-icon img:hover {
-    filter: brightness(100%);;
-    transform: scale(1.3);
-  }
+}
+
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-left {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: right;
+}
+
+.footer-logo-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: 20px;
+}
+.footer-logo {
+  max-width: 100px;
+  margin-right: 10px;
+}
+
+.footer-logo-text {
+  font-size: 14px;
+  /* text-align: left; */
+}
+
+.footer-text p {
+  margin: 0;
+  line-height: 1.2;
+  color: #000000;
+  font-size: 1.5rem;
+}
+
+.footer-text p {
+  margin: 0;
+  line-height: 1.2;
+}
+
+.footer-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: "MyCustomFont";
+}
+
+.footer-title {
+  font-size: 2.4rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-family: "MyCustomFont";
+
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.footer-icon {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.footer-item-icon img{
+  width: 30px;
+  margin-right: 15px;
+  filter: brightness(0%);
+  transition: all 0.7s ease-in-out;
+}
+
+
+.footer-item-icon img:hover {
+  filter: brightness(100%);;
+  transform: scale(1.3);
+}
