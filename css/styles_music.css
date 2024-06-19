@@ -172,6 +172,7 @@ body {
   
   .popup-content {
     background-color: #fefefe;
+    margin-top: 5% !important;
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
@@ -181,6 +182,7 @@ body {
   
   .popup-image {
     width: 40%;
+    height: 40%;
     position: relative;
   }
   
@@ -202,6 +204,7 @@ body {
   .popup-info {
     width: 60%;
     padding-left: 20px;
+    font-family: 'MyCustomFont';
     text-align: left; /* Выравнивание по левому краю */
   }
   
@@ -209,23 +212,29 @@ body {
   .popup-info h2,
   .popup-info p {
     text-align: left;
+    font-family: 'MyCustomFont';
   }
   
-  .track-list {
-    margin-top: 20px;
-  }
-  
-  .track-list ul {
+  ul {
     list-style-type: none;
     padding: 0;
   }
   
-  .track-list li {
+  li {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
   }
   
+  .track-name {
+    text-align: left;
+    flex-grow: 1;
+  }
+  
+  .track-duration {
+    text-align: right;
+  }
   .play-button {
     margin-right: 10px;
   }
