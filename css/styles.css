@@ -69,18 +69,9 @@ body {
   }
 
 
-  /* .photo1 {
-    position: relative;
-    height: 50%;
-    width: 37%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    z-index: 2;
-  } */
   .photo-container {
     position: relative;
-    height: 50%; /* Установите нужную высоту */
+    height: 50%;
   }
   
   .photo1 {
@@ -94,14 +85,14 @@ body {
   
   .photo2 {
     position: absolute;
-    top: 50px; /* Расположение в верхней половине относительно photo1 */
+    top: 50px; 
     left: 50%;
-    transform: translateX(-50%);/* Центрирование по горизонтали */
-    z-index: 0; /* Размещение behind photo1 */
+    transform: translateX(-50%);
+    z-index: 0;
   }
   
   .photo2 img {
-    max-width: 100vh; /* Установите нужный размер */
+    max-width: 100vh; 
   }
 
   .vid{
@@ -117,17 +108,7 @@ body {
     margin-right: auto;
     z-index: 1;
   }
-/* .photo2 {
-    position: relative;
-    z-index: 1;
-  } */
 
-/* .bass{
-  position: relative;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-} */
  .bass img{
   position: relative;
   display: block;
