@@ -69,7 +69,7 @@ body {
   }
 
 
-  .photo1 {
+  /* .photo1 {
     position: relative;
     height: 50%;
     width: 37%;
@@ -77,8 +77,32 @@ body {
     margin-left: auto;
     margin-right: auto;
     z-index: 2;
+  } */
+  .photo-container {
+    position: relative;
+    height: 50%; /* Установите нужную высоту */
   }
-
+  
+  .photo1 {
+    position: relative;
+    width: 37%;
+    z-index: 1;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .photo2 {
+    position: absolute;
+    top: 50px; /* Расположение в верхней половине относительно photo1 */
+    left: 50%;
+    transform: translateX(-50%);/* Центрирование по горизонтали */
+    z-index: 0; /* Размещение behind photo1 */
+  }
+  
+  .photo2 img {
+    max-width: 100vh; /* Установите нужный размер */
+  }
 
   .vid{
     position: relative;

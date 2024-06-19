@@ -13,24 +13,27 @@ $(function() {
           }
           // Отправка формы        
           if (check == true) {
-              $.post("/send.php", $frm.find(".form-at select, .form-at input, .form-at textarea").serialize(),
-                  function(data){
-                      if(data.frm_check == 'error'){ 
-                          $frm.find(".result-at").html("<div class='error-at'>Ошибка: " + data.msg + "</div>");                    
-                          } else {
-                          $frm.find(".result-at").html("<div class='success-at'>Ваше сообщение отправлено!</div>"); 
-                          $frm.find(".form-at").fadeOut(500);
-                          $frm.find(".input-at").val("");            
-                      }
-                  }, "json");
-                  return false;
-          }
-      });
-      $('.form-at .input-at').each(function(){
-          $(this).focus(function(){
-              hideValidate(this);
-          });
-      });
+            $.ajax({
+                type: "POST",
+                url: "/send.php",
+                data: $frm.find(".form-at select, .form-at input, .form-at textarea").serialize(),
+                dataType: "json",
+                success: function(data) {
+                    if (data.frm_check == 'error') {
+                        $frm.find(".result-at").html("<div class='error-at'>Ошибка: " + data.msg + "</div>");
+                    } else {
+                        $frm.find(".result-at").html("<div class='success-at'>Ваше сообщение отправлено!</div>");
+                        $frm.find(".form-at").fadeOut(500);
+                        $frm.find(".input-at").val("");
+                    }
+                },
+                error: function() {
+                    $frm.find(".result-at").html("<div class='error-at'>Произошла ошибка при отправке сообщения.</div>");
+                }
+            });
+            return false;
+        }
+        
       
   });    
   function validate(input) {
@@ -54,4 +57,5 @@ $(function() {
       var thisAlert = $(input).parent();
       $(thisAlert).removeClass('alert-validate');
   }
+})
 });
